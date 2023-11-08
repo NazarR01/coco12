@@ -1,4 +1,4 @@
-#Ejemplo IA#
+#Ejemplo IA
 
 Este ejemplo se creo para ser presentado el dia miercoles 8 de noviembre con la finalidad de 
 demostrar una IA primitiva usando POO en C++.
