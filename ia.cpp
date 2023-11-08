@@ -1,12 +1,17 @@
+/*Inclusion de librerias*/
 #include <iostream>
 #include <string>
 
+/*crea la clase*/
 class ChatBot {
 public:
+    /*crea metodos*/
+    /*imprime un mensaje de saludo en la consola*/
     void saludar() {
         std::cout << "Hola, soy un ChatBot. ¿En qué puedo ayudarte?" << std::endl;
     }
 
+    /* toma una pregunta como entrada y selecciona una respuesta basada en las palabras clave encontradas en la pregunta.*/
     void responderPregunta(const std::string& pregunta) {
         if (pregunta.find("color favorito") != std::string::npos) {
             std::cout << "Mi color favorito es el azul." << std::endl;
@@ -29,19 +34,23 @@ public:
 };
 
 int main() {
+    /*Crea una instancia de la clase ChatBot*/
     ChatBot chatBot;
+    /*activa un metodo*/
     chatBot.saludar();
 
     while (true) {
+        /*lee una pregunta del usuario*/
         std::string pregunta;
         std::cout << "Tú: ";
         std::getline(std::cin, pregunta);
 
         if (pregunta == "salir") {
+           /* Si el usuario ingresa "salir," el programa termina*/
             std::cout << "ChatBot: Hasta luego. ¡Vuelve pronto!" << std::endl;
             break;
         }
-
+        /*Llama al método responderPregunta para obtener una respuesta*/
         chatBot.responderPregunta(pregunta);
     }
 
